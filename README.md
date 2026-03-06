@@ -1,4 +1,4 @@
-# Incremental Data Integration Pipeline
+# Incremental Delta Load Pipeline — Multi-Source to Azure SQL
 ### Azure Data Factory · SQL Server Change Tracking · Dynamic MERGE
 
 ![Azure](https://img.shields.io/badge/Azure-Data%20Factory-0078D4?style=flat&logo=microsoftazure)
