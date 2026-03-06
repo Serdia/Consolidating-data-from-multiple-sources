@@ -16,30 +16,8 @@ A near-real-time incremental data ingestion pipeline that consolidates data from
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────┐
-│              ON-PREMISES SOURCES             │
-│                                             │
-│  [SQL Server 1]  [SQL Server 2]  [SQL Server 3]  [Parquet / Azure Blob] │
-└────────────────────────┬────────────────────┘
-                         │  Change Tracking / File Delta
-                         ▼
-┌─────────────────────────────────────────────┐
-│           AZURE DATA FACTORY                │
-│                                             │
-│  GetTableMetaData → StartLoad → Copy Data   │
-│       → Merge Staged Data → CompleteLoad    │
-└────────────────────────┬────────────────────┘
-                         │
-                         ▼
-┌─────────────────────────────────────────────┐
-│           AZURE SQL DATABASE                │
-│                                             │
-│  [Staging Tables]  →  [Persistent Tables]   │
-│  [Watermark / Control Table]                │
-│  [Audit Log]                                │
-└─────────────────────────────────────────────┘
-```
+<img width="778" height="574" alt="image" src="https://github.com/user-attachments/assets/71527121-20d1-42e8-8d30-00e7145c6e84" />
+
 
 ---
 
